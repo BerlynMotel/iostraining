@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BBBBaseUIViewController.h
 //  BeyBulletinBoard
 //
 //  Created by Berlyn Motel on 12/9/14.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface BBBBaseUIViewController : UIViewController
 
+- (UIView*)getCustomXibUsingXibName:(NSString*)xibName;
 
 @end
-

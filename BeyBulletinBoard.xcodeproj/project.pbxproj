@@ -10,11 +10,17 @@
 		DB99A6241A369AEF0092E618 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6231A369AEF0092E618 /* main.m */; };
 		DB99A6271A369AEF0092E618 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6261A369AEF0092E618 /* AppDelegate.m */; };
 		DB99A62A1A369AEF0092E618 /* BeyBulletinBoard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6281A369AEF0092E618 /* BeyBulletinBoard.xcdatamodeld */; };
-		DB99A62D1A369AEF0092E618 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A62C1A369AEF0092E618 /* ViewController.m */; };
 		DB99A6301A369AEF0092E618 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB99A62E1A369AEF0092E618 /* Main.storyboard */; };
 		DB99A6321A369AEF0092E618 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB99A6311A369AEF0092E618 /* Images.xcassets */; };
 		DB99A6351A369AEF0092E618 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB99A6331A369AEF0092E618 /* LaunchScreen.xib */; };
 		DB99A6411A369AEF0092E618 /* BeyBulletinBoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6401A369AEF0092E618 /* BeyBulletinBoardTests.m */; };
+		DB99A6521A36A3740092E618 /* BBBLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6511A36A3740092E618 /* BBBLoginView.m */; };
+		DB99A6551A36A6610092E618 /* BBBBaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6541A36A6610092E618 /* BBBBaseUIViewController.m */; };
+		DB99A6581A36A6C80092E618 /* BBBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6571A36A6C80092E618 /* BBBLoginViewController.m */; };
+		DB99A65A1A36C4A20092E618 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB99A6591A36C4A20092E618 /* LoginView.xib */; };
+		DB99A65D1A36D5F50092E618 /* BBBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A65C1A36D5F50092E618 /* BBBHomeViewController.m */; };
+		DB99A65F1A36DAB40092E618 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB99A65E1A36DAB40092E618 /* HomeView.xib */; };
+		DB99A6621A36E2290092E618 /* BBBHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6611A36E2290092E618 /* BBBHomeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +40,24 @@
 		DB99A6251A369AEF0092E618 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DB99A6261A369AEF0092E618 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DB99A6291A369AEF0092E618 /* BeyBulletinBoard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeyBulletinBoard.xcdatamodel; sourceTree = "<group>"; };
-		DB99A62B1A369AEF0092E618 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DB99A62C1A369AEF0092E618 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DB99A62F1A369AEF0092E618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB99A6311A369AEF0092E618 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DB99A6341A369AEF0092E618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DB99A63A1A369AEF0092E618 /* BeyBulletinBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeyBulletinBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB99A63F1A369AEF0092E618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB99A6401A369AEF0092E618 /* BeyBulletinBoardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeyBulletinBoardTests.m; sourceTree = "<group>"; };
+		DB99A6501A36A3740092E618 /* BBBLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBLoginView.h; path = Views/BBBLoginView.h; sourceTree = "<group>"; };
+		DB99A6511A36A3740092E618 /* BBBLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBLoginView.m; path = Views/BBBLoginView.m; sourceTree = "<group>"; };
+		DB99A6531A36A6610092E618 /* BBBBaseUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBBaseUIViewController.h; path = Controllers/BBBBaseUIViewController.h; sourceTree = "<group>"; };
+		DB99A6541A36A6610092E618 /* BBBBaseUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBBaseUIViewController.m; path = Controllers/BBBBaseUIViewController.m; sourceTree = "<group>"; };
+		DB99A6561A36A6C80092E618 /* BBBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBLoginViewController.h; path = Controllers/BBBLoginViewController.h; sourceTree = "<group>"; };
+		DB99A6571A36A6C80092E618 /* BBBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBLoginViewController.m; path = Controllers/BBBLoginViewController.m; sourceTree = "<group>"; };
+		DB99A6591A36C4A20092E618 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		DB99A65B1A36D5F50092E618 /* BBBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBHomeViewController.h; path = Controllers/BBBHomeViewController.h; sourceTree = "<group>"; };
+		DB99A65C1A36D5F50092E618 /* BBBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBHomeViewController.m; path = Controllers/BBBHomeViewController.m; sourceTree = "<group>"; };
+		DB99A65E1A36DAB40092E618 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeView.xib; path = Xibs/HomeView.xib; sourceTree = "<group>"; };
+		DB99A6601A36E2290092E618 /* BBBHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBHomeView.h; path = Views/BBBHomeView.h; sourceTree = "<group>"; };
+		DB99A6611A36E2290092E618 /* BBBHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBHomeView.m; path = Views/BBBHomeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +99,12 @@
 		DB99A6201A369AEF0092E618 /* BeyBulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
+				DB99A64D1A369B0F0092E618 /* Controllers */,
+				DB99A64C1A369B0A0092E618 /* Models */,
+				DB99A64B1A369B050092E618 /* Views */,
+				DB99A64A1A369AFD0092E618 /* Xibs */,
 				DB99A6251A369AEF0092E618 /* AppDelegate.h */,
 				DB99A6261A369AEF0092E618 /* AppDelegate.m */,
-				DB99A62B1A369AEF0092E618 /* ViewController.h */,
-				DB99A62C1A369AEF0092E618 /* ViewController.m */,
 				DB99A62E1A369AEF0092E618 /* Main.storyboard */,
 				DB99A6311A369AEF0092E618 /* Images.xcassets */,
 				DB99A6331A369AEF0092E618 /* LaunchScreen.xib */,
@@ -120,6 +138,46 @@
 				DB99A63F1A369AEF0092E618 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB99A64A1A369AFD0092E618 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				DB99A6591A36C4A20092E618 /* LoginView.xib */,
+				DB99A65E1A36DAB40092E618 /* HomeView.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
+		DB99A64B1A369B050092E618 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB99A6501A36A3740092E618 /* BBBLoginView.h */,
+				DB99A6511A36A3740092E618 /* BBBLoginView.m */,
+				DB99A6601A36E2290092E618 /* BBBHomeView.h */,
+				DB99A6611A36E2290092E618 /* BBBHomeView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DB99A64C1A369B0A0092E618 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DB99A64D1A369B0F0092E618 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB99A6531A36A6610092E618 /* BBBBaseUIViewController.h */,
+				DB99A6541A36A6610092E618 /* BBBBaseUIViewController.m */,
+				DB99A6561A36A6C80092E618 /* BBBLoginViewController.h */,
+				DB99A6571A36A6C80092E618 /* BBBLoginViewController.m */,
+				DB99A65B1A36D5F50092E618 /* BBBHomeViewController.h */,
+				DB99A65C1A36D5F50092E618 /* BBBHomeViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +224,7 @@
 		DB99A6161A369AEF0092E618 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BBB;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Berlyn Motel";
 				TargetAttributes = {
@@ -204,7 +263,9 @@
 			files = (
 				DB99A6301A369AEF0092E618 /* Main.storyboard in Resources */,
 				DB99A6351A369AEF0092E618 /* LaunchScreen.xib in Resources */,
+				DB99A65A1A36C4A20092E618 /* LoginView.xib in Resources */,
 				DB99A6321A369AEF0092E618 /* Images.xcassets in Resources */,
+				DB99A65F1A36DAB40092E618 /* HomeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,10 +283,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB99A65D1A36D5F50092E618 /* BBBHomeViewController.m in Sources */,
 				DB99A62A1A369AEF0092E618 /* BeyBulletinBoard.xcdatamodeld in Sources */,
+				DB99A6621A36E2290092E618 /* BBBHomeView.m in Sources */,
+				DB99A6581A36A6C80092E618 /* BBBLoginViewController.m in Sources */,
 				DB99A6271A369AEF0092E618 /* AppDelegate.m in Sources */,
-				DB99A62D1A369AEF0092E618 /* ViewController.m in Sources */,
 				DB99A6241A369AEF0092E618 /* main.m in Sources */,
+				DB99A6521A36A3740092E618 /* BBBLoginView.m in Sources */,
+				DB99A6551A36A6610092E618 /* BBBBaseUIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

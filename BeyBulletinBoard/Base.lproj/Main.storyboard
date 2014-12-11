@@ -18,7 +18,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZc-KO-ZKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-212" y="300"/>
+            <point key="canvasLocation" x="-532" y="-324"/>
         </scene>
         <!--Login-->
         <scene sceneID="Txs-pL-n0M">
@@ -36,7 +36,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ezl-Qr-Z1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="192" y="300"/>
+            <point key="canvasLocation" x="-80" y="-324"/>
+        </scene>
+        <!--Post View-->
+        <scene sceneID="VKM-Za-JVf">
+            <objects>
+                <viewController title="Post View" id="OHb-XP-t1U" customClass="BBBPostViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mrB-O3-w5i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mlm-iY-dcT"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ghZ-ma-r3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="-710"/>
         </scene>
         <!--Home-->
         <scene sceneID="mMi-y1-mX8">
@@ -48,10 +64,30 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="lIr-ct-Axq"/>
+                    <connections>
+                        <segue destination="8QE-JD-y1l" kind="push" identifier="homeToAddPostSegue" id="zbr-U9-6Wj"/>
+                        <segue destination="OHb-XP-t1U" kind="push" identifier="HomeToViewPost" id="pXw-Lc-lwx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k56-ao-yoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="572" y="299"/>
+            <point key="canvasLocation" x="358" y="-324"/>
+        </scene>
+        <!--Add Post View Controller-->
+        <scene sceneID="340-sB-gIt">
+            <objects>
+                <viewController id="8QE-JD-y1l" customClass="BBBAddPostViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aL5-aT-PLz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BDr-nU-k3N"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5oi-Ua-l5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="62"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

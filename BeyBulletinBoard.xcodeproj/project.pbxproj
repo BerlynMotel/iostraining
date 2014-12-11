@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB33750E1A37289C002F21AB /* AddPostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB33750D1A37289C002F21AB /* AddPostView.xib */; };
 		DB99A6241A369AEF0092E618 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6231A369AEF0092E618 /* main.m */; };
 		DB99A6271A369AEF0092E618 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6261A369AEF0092E618 /* AppDelegate.m */; };
 		DB99A62A1A369AEF0092E618 /* BeyBulletinBoard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6281A369AEF0092E618 /* BeyBulletinBoard.xcdatamodeld */; };
@@ -21,6 +22,15 @@
 		DB99A65D1A36D5F50092E618 /* BBBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A65C1A36D5F50092E618 /* BBBHomeViewController.m */; };
 		DB99A65F1A36DAB40092E618 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB99A65E1A36DAB40092E618 /* HomeView.xib */; };
 		DB99A6621A36E2290092E618 /* BBBHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6611A36E2290092E618 /* BBBHomeView.m */; };
+		DB9C7FCB1A382CFC00EC01D2 /* BBBAddPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9C7FCA1A382CFC00EC01D2 /* BBBAddPostViewController.m */; };
+		DB9C7FCE1A382D1B00EC01D2 /* BBBAddPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9C7FCD1A382D1B00EC01D2 /* BBBAddPostView.m */; };
+		DB9C7FD01A384FEE00EC01D2 /* PostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9C7FCF1A384FEE00EC01D2 /* PostView.xib */; };
+		DB9C7FD31A3851A100EC01D2 /* BBBPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9C7FD21A3851A100EC01D2 /* BBBPostView.m */; };
+		DB9C7FD61A38532700EC01D2 /* BBBPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9C7FD51A38532700EC01D2 /* BBBPostViewController.m */; };
+		DBC1990A1A37F5D60041FBD3 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC199091A37F5D60041FBD3 /* PostTableViewCell.xib */; };
+		DBC1990D1A37F7170041FBD3 /* BBBPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC1990C1A37F7170041FBD3 /* BBBPostTableViewCell.m */; };
+		DBD3DFE51A39455E00CB0631 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD3DFE41A39455E00CB0631 /* CommentTableViewCell.xib */; };
+		DBD3DFEB1A3946D900CB0631 /* BBBCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD3DFEA1A3946D900CB0631 /* BBBCommentTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB33750D1A37289C002F21AB /* AddPostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddPostView.xib; path = Xibs/AddPostView.xib; sourceTree = "<group>"; };
 		DB99A61E1A369AEF0092E618 /* BeyBulletinBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeyBulletinBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB99A6221A369AEF0092E618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB99A6231A369AEF0092E618 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,6 +69,21 @@
 		DB99A65E1A36DAB40092E618 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeView.xib; path = Xibs/HomeView.xib; sourceTree = "<group>"; };
 		DB99A6601A36E2290092E618 /* BBBHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBHomeView.h; path = Views/BBBHomeView.h; sourceTree = "<group>"; };
 		DB99A6611A36E2290092E618 /* BBBHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBHomeView.m; path = Views/BBBHomeView.m; sourceTree = "<group>"; };
+		DB9C7FC91A382CFC00EC01D2 /* BBBAddPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBAddPostViewController.h; path = Controllers/BBBAddPostViewController.h; sourceTree = "<group>"; };
+		DB9C7FCA1A382CFC00EC01D2 /* BBBAddPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBAddPostViewController.m; path = Controllers/BBBAddPostViewController.m; sourceTree = "<group>"; };
+		DB9C7FCC1A382D1B00EC01D2 /* BBBAddPostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBAddPostView.h; path = Views/BBBAddPostView.h; sourceTree = "<group>"; };
+		DB9C7FCD1A382D1B00EC01D2 /* BBBAddPostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBAddPostView.m; path = Views/BBBAddPostView.m; sourceTree = "<group>"; };
+		DB9C7FCF1A384FEE00EC01D2 /* PostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostView.xib; path = Xibs/PostView.xib; sourceTree = "<group>"; };
+		DB9C7FD11A3851A100EC01D2 /* BBBPostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBPostView.h; path = Views/BBBPostView.h; sourceTree = "<group>"; };
+		DB9C7FD21A3851A100EC01D2 /* BBBPostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBPostView.m; path = Views/BBBPostView.m; sourceTree = "<group>"; };
+		DB9C7FD41A38532700EC01D2 /* BBBPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBPostViewController.h; path = Controllers/BBBPostViewController.h; sourceTree = "<group>"; };
+		DB9C7FD51A38532700EC01D2 /* BBBPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBPostViewController.m; path = Controllers/BBBPostViewController.m; sourceTree = "<group>"; };
+		DBC199091A37F5D60041FBD3 /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostTableViewCell.xib; path = Xibs/PostTableViewCell.xib; sourceTree = "<group>"; };
+		DBC1990B1A37F7170041FBD3 /* BBBPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBPostTableViewCell.h; path = Views/BBBPostTableViewCell.h; sourceTree = "<group>"; };
+		DBC1990C1A37F7170041FBD3 /* BBBPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBPostTableViewCell.m; path = Views/BBBPostTableViewCell.m; sourceTree = "<group>"; };
+		DBD3DFE41A39455E00CB0631 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentTableViewCell.xib; path = Xibs/CommentTableViewCell.xib; sourceTree = "<group>"; };
+		DBD3DFE91A3946D900CB0631 /* BBBCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBCommentTableViewCell.h; path = Views/BBBCommentTableViewCell.h; sourceTree = "<group>"; };
+		DBD3DFEA1A3946D900CB0631 /* BBBCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBCommentTableViewCell.m; path = Views/BBBCommentTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +171,10 @@
 			children = (
 				DB99A6591A36C4A20092E618 /* LoginView.xib */,
 				DB99A65E1A36DAB40092E618 /* HomeView.xib */,
+				DB33750D1A37289C002F21AB /* AddPostView.xib */,
+				DBC199091A37F5D60041FBD3 /* PostTableViewCell.xib */,
+				DB9C7FCF1A384FEE00EC01D2 /* PostView.xib */,
+				DBD3DFE41A39455E00CB0631 /* CommentTableViewCell.xib */,
 			);
 			name = Xibs;
 			sourceTree = "<group>";
@@ -156,6 +186,14 @@
 				DB99A6511A36A3740092E618 /* BBBLoginView.m */,
 				DB99A6601A36E2290092E618 /* BBBHomeView.h */,
 				DB99A6611A36E2290092E618 /* BBBHomeView.m */,
+				DBC1990B1A37F7170041FBD3 /* BBBPostTableViewCell.h */,
+				DBC1990C1A37F7170041FBD3 /* BBBPostTableViewCell.m */,
+				DB9C7FCC1A382D1B00EC01D2 /* BBBAddPostView.h */,
+				DB9C7FCD1A382D1B00EC01D2 /* BBBAddPostView.m */,
+				DB9C7FD11A3851A100EC01D2 /* BBBPostView.h */,
+				DB9C7FD21A3851A100EC01D2 /* BBBPostView.m */,
+				DBD3DFE91A3946D900CB0631 /* BBBCommentTableViewCell.h */,
+				DBD3DFEA1A3946D900CB0631 /* BBBCommentTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -176,6 +214,10 @@
 				DB99A6571A36A6C80092E618 /* BBBLoginViewController.m */,
 				DB99A65B1A36D5F50092E618 /* BBBHomeViewController.h */,
 				DB99A65C1A36D5F50092E618 /* BBBHomeViewController.m */,
+				DB9C7FC91A382CFC00EC01D2 /* BBBAddPostViewController.h */,
+				DB9C7FCA1A382CFC00EC01D2 /* BBBAddPostViewController.m */,
+				DB9C7FD41A38532700EC01D2 /* BBBPostViewController.h */,
+				DB9C7FD51A38532700EC01D2 /* BBBPostViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -265,6 +307,10 @@
 				DB99A6351A369AEF0092E618 /* LaunchScreen.xib in Resources */,
 				DB99A65A1A36C4A20092E618 /* LoginView.xib in Resources */,
 				DB99A6321A369AEF0092E618 /* Images.xcassets in Resources */,
+				DBC1990A1A37F5D60041FBD3 /* PostTableViewCell.xib in Resources */,
+				DB33750E1A37289C002F21AB /* AddPostView.xib in Resources */,
+				DB9C7FD01A384FEE00EC01D2 /* PostView.xib in Resources */,
+				DBD3DFE51A39455E00CB0631 /* CommentTableViewCell.xib in Resources */,
 				DB99A65F1A36DAB40092E618 /* HomeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,12 +330,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB99A65D1A36D5F50092E618 /* BBBHomeViewController.m in Sources */,
+				DB9C7FCB1A382CFC00EC01D2 /* BBBAddPostViewController.m in Sources */,
 				DB99A62A1A369AEF0092E618 /* BeyBulletinBoard.xcdatamodeld in Sources */,
+				DB9C7FD31A3851A100EC01D2 /* BBBPostView.m in Sources */,
 				DB99A6621A36E2290092E618 /* BBBHomeView.m in Sources */,
 				DB99A6581A36A6C80092E618 /* BBBLoginViewController.m in Sources */,
+				DB9C7FD61A38532700EC01D2 /* BBBPostViewController.m in Sources */,
 				DB99A6271A369AEF0092E618 /* AppDelegate.m in Sources */,
+				DBC1990D1A37F7170041FBD3 /* BBBPostTableViewCell.m in Sources */,
 				DB99A6241A369AEF0092E618 /* main.m in Sources */,
+				DBD3DFEB1A3946D900CB0631 /* BBBCommentTableViewCell.m in Sources */,
 				DB99A6521A36A3740092E618 /* BBBLoginView.m in Sources */,
+				DB9C7FCE1A382D1B00EC01D2 /* BBBAddPostView.m in Sources */,
 				DB99A6551A36A6610092E618 /* BBBBaseUIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +533,7 @@
 				DB99A6461A369AEF0092E618 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB99A6471A369AEF0092E618 /* Build configuration list for PBXNativeTarget "BeyBulletinBoardTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +542,7 @@
 				DB99A6491A369AEF0092E618 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

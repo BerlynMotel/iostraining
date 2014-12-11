@@ -8,9 +8,12 @@
 
 #import "BBBBaseUIViewController.h"
 #import "BBBHomeView.h"
+#import "BBBPostTableViewCell.h"
 
-@interface BBBHomeViewController : BBBBaseUIViewController
+@interface BBBHomeViewController : BBBBaseUIViewController<BBBHomeViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) BBBHomeView *homeView;
+@property (strong, nonatomic) NSString *username;
+@property (strong, nonatomic) BBBPostTableViewCell *postTableView;
 
 @end

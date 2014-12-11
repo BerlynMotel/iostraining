@@ -30,6 +30,8 @@
     self.loginView.usernameTextField.delegate = self;
     self.loginView.passwordTextField.delegate = self;
     
+    self.loginView.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height);
+    
     [self registerForKeyboardNotifications];
     
     // add login view to view
@@ -37,6 +39,12 @@
     
     users = [[NSArray alloc] initWithObjects:@"mac", @"bey", @"jovie", nil];
     passwords = [[NSMutableArray alloc] initWithObjects:@"mac", @"bey", @"jovie", nil];
+    
+}
+
+-(void) viewDidDisappear:(BOOL)animated{
+    self.loginView.usernameTextField.text = @"";
+    self.loginView.passwordTextField.text = @"";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,6 +64,9 @@
             NSInteger passwordIndex = [passwords indexOfObject:inputPassword];
             
             if (userIndex == passwordIndex) {
+                // UserDefaults is like session in web
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                [defaults setObject:inputUsername forKey:@"username"];
                 [self performSegueWithIdentifier:@"LoginToHomeSegue" sender:self];
             }
             else{
@@ -108,7 +119,7 @@
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
     // Compute visible active field
-    CGRect visibleActiveFieldRect = CGRectMake(activeField.frame.origin.x, activeField.frame.origin.y + kbSize.height, activeField.frame.size.width, activeField.frame.size.height);
+    CGRect visibleActiveFieldRect = CGRectMake(activeField.frame.origin.x, activeField.frame.origin.y + kbSize.height, activeField.frame.size.width, activeField.frame.size.height + 15);
     
     // Adjust scroll view content size
     self.loginView.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + kbSize.height);

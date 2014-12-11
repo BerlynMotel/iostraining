@@ -11,8 +11,15 @@
 @implementation BBBHomeView
 
 - (IBAction)logoutButtonPressed:(id)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(logoutButtonPressed)]) {
+        [self.delegate logoutButtonPressed];
+    }
 }
 
 - (IBAction)addNewPostButton:(id)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(addNewPostButton)]) {
+        [self.delegate addNewPostButton];
+    }
 }
+
 @end

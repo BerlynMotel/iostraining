@@ -68,7 +68,7 @@
     NSString *inputUsername = self.loginView.usernameTextField.text;
     NSString *inputPassword = self.loginView.passwordTextField.text;
     
-    if (![inputUsername isEqualToString:@""] && ![inputPassword isEqualToString:@""]) {
+    if (![inputUsername isEqualToString:@""] && ![inputPassword isEqualToString:@""]){
         if ([users containsObject:inputUsername] && [passwords containsObject:inputPassword]) {
             NSInteger userIndex = [users indexOfObject:inputUsername];
             NSInteger passwordIndex = [passwords indexOfObject:inputPassword];
@@ -91,8 +91,20 @@
             [alertView show];
         }
     }
-    else{
+    else if ([inputUsername isEqualToString:@""] && [inputPassword isEqualToString:@""]){
         NSString *msg = @"Username or password cannot be blank.";
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
+    else if ([inputUsername isEqualToString:@""] && inputPassword.length > 0){
+        
+        NSString *msg = @"Please input your username!";
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
+    else if ([inputPassword isEqualToString:@""] && inputUsername.length > 0){
+        
+        NSString *msg = @"Please input your password!";
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
     }

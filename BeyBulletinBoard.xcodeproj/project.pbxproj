@@ -18,7 +18,6 @@
 		DB99A6521A36A3740092E618 /* BBBLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6511A36A3740092E618 /* BBBLoginView.m */; };
 		DB99A6551A36A6610092E618 /* BBBBaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6541A36A6610092E618 /* BBBBaseUIViewController.m */; };
 		DB99A6581A36A6C80092E618 /* BBBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6571A36A6C80092E618 /* BBBLoginViewController.m */; };
-		DB99A65A1A36C4A20092E618 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB99A6591A36C4A20092E618 /* LoginView.xib */; };
 		DB99A65D1A36D5F50092E618 /* BBBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A65C1A36D5F50092E618 /* BBBHomeViewController.m */; };
 		DB99A65F1A36DAB40092E618 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB99A65E1A36DAB40092E618 /* HomeView.xib */; };
 		DB99A6621A36E2290092E618 /* BBBHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB99A6611A36E2290092E618 /* BBBHomeView.m */; };
@@ -31,6 +30,9 @@
 		DBC1990D1A37F7170041FBD3 /* BBBPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC1990C1A37F7170041FBD3 /* BBBPostTableViewCell.m */; };
 		DBD3DFE51A39455E00CB0631 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD3DFE41A39455E00CB0631 /* CommentTableViewCell.xib */; };
 		DBD3DFEB1A3946D900CB0631 /* BBBCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD3DFEA1A3946D900CB0631 /* BBBCommentTableViewCell.m */; };
+		DBD3E0001A39A03700CB0631 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD3DFFF1A39A03700CB0631 /* Comment.m */; };
+		DBD3E0031A39A03800CB0631 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD3E0021A39A03800CB0631 /* Post.m */; };
+		DBD3E0071A3ACE1000CB0631 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD3E0061A3ACE1000CB0631 /* LoginView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +65,6 @@
 		DB99A6541A36A6610092E618 /* BBBBaseUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBBaseUIViewController.m; path = Controllers/BBBBaseUIViewController.m; sourceTree = "<group>"; };
 		DB99A6561A36A6C80092E618 /* BBBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBLoginViewController.h; path = Controllers/BBBLoginViewController.h; sourceTree = "<group>"; };
 		DB99A6571A36A6C80092E618 /* BBBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBLoginViewController.m; path = Controllers/BBBLoginViewController.m; sourceTree = "<group>"; };
-		DB99A6591A36C4A20092E618 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		DB99A65B1A36D5F50092E618 /* BBBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBHomeViewController.h; path = Controllers/BBBHomeViewController.h; sourceTree = "<group>"; };
 		DB99A65C1A36D5F50092E618 /* BBBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBHomeViewController.m; path = Controllers/BBBHomeViewController.m; sourceTree = "<group>"; };
 		DB99A65E1A36DAB40092E618 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeView.xib; path = Xibs/HomeView.xib; sourceTree = "<group>"; };
@@ -84,6 +85,11 @@
 		DBD3DFE41A39455E00CB0631 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentTableViewCell.xib; path = Xibs/CommentTableViewCell.xib; sourceTree = "<group>"; };
 		DBD3DFE91A3946D900CB0631 /* BBBCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBBCommentTableViewCell.h; path = Views/BBBCommentTableViewCell.h; sourceTree = "<group>"; };
 		DBD3DFEA1A3946D900CB0631 /* BBBCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBBCommentTableViewCell.m; path = Views/BBBCommentTableViewCell.m; sourceTree = "<group>"; };
+		DBD3DFFE1A39A03700CB0631 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Comment.h; path = Models/Comment.h; sourceTree = "<group>"; };
+		DBD3DFFF1A39A03700CB0631 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Comment.m; path = Models/Comment.m; sourceTree = "<group>"; };
+		DBD3E0011A39A03800CB0631 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = Models/Post.h; sourceTree = "<group>"; };
+		DBD3E0021A39A03800CB0631 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = Models/Post.m; sourceTree = "<group>"; };
+		DBD3E0061A3ACE1000CB0631 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginView.xib; path = Xibs/LoginView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +175,7 @@
 		DB99A64A1A369AFD0092E618 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				DB99A6591A36C4A20092E618 /* LoginView.xib */,
+				DBD3E0061A3ACE1000CB0631 /* LoginView.xib */,
 				DB99A65E1A36DAB40092E618 /* HomeView.xib */,
 				DB33750D1A37289C002F21AB /* AddPostView.xib */,
 				DBC199091A37F5D60041FBD3 /* PostTableViewCell.xib */,
@@ -201,6 +207,10 @@
 		DB99A64C1A369B0A0092E618 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DBD3E0011A39A03800CB0631 /* Post.h */,
+				DBD3E0021A39A03800CB0631 /* Post.m */,
+				DBD3DFFE1A39A03700CB0631 /* Comment.h */,
+				DBD3DFFF1A39A03700CB0631 /* Comment.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -305,7 +315,7 @@
 			files = (
 				DB99A6301A369AEF0092E618 /* Main.storyboard in Resources */,
 				DB99A6351A369AEF0092E618 /* LaunchScreen.xib in Resources */,
-				DB99A65A1A36C4A20092E618 /* LoginView.xib in Resources */,
+				DBD3E0071A3ACE1000CB0631 /* LoginView.xib in Resources */,
 				DB99A6321A369AEF0092E618 /* Images.xcassets in Resources */,
 				DBC1990A1A37F5D60041FBD3 /* PostTableViewCell.xib in Resources */,
 				DB33750E1A37289C002F21AB /* AddPostView.xib in Resources */,
@@ -336,12 +346,14 @@
 				DB99A6621A36E2290092E618 /* BBBHomeView.m in Sources */,
 				DB99A6581A36A6C80092E618 /* BBBLoginViewController.m in Sources */,
 				DB9C7FD61A38532700EC01D2 /* BBBPostViewController.m in Sources */,
+				DBD3E0031A39A03800CB0631 /* Post.m in Sources */,
 				DB99A6271A369AEF0092E618 /* AppDelegate.m in Sources */,
 				DBC1990D1A37F7170041FBD3 /* BBBPostTableViewCell.m in Sources */,
 				DB99A6241A369AEF0092E618 /* main.m in Sources */,
 				DBD3DFEB1A3946D900CB0631 /* BBBCommentTableViewCell.m in Sources */,
 				DB99A6521A36A3740092E618 /* BBBLoginView.m in Sources */,
 				DB9C7FCE1A382D1B00EC01D2 /* BBBAddPostView.m in Sources */,
+				DBD3E0001A39A03700CB0631 /* Comment.m in Sources */,
 				DB99A6551A36A6610092E618 /* BBBBaseUIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,9 +7,11 @@
 //
 
 #import "BBBAddPostViewController.h"
+#import "AppDelegate.h"
 
 @interface BBBAddPostViewController (){
     UITextField *activeField;
+    UITextView *activeField2;
 
 }
 
@@ -21,14 +23,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyBoard)];
+    [self.view addGestureRecognizer:tapGesture];
+    self.navigationItem.hidesBackButton = YES;
+    
     self.addPostView = (BBBAddPostView*)[self getCustomXibUsingXibName:@"AddPostView"];
     self.addPostView.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height);
     
     [self.view addSubview:self.addPostView];
+    [self registerForKeyboardNotifications];
+    
     self.addPostView.delegate = self;
     self.addPostView.titleLabel.delegate = self;
     self.addPostView.postDescriptionLabel.delegate = self;
+    
 }
+
+-(void)hideKeyBoard {
+    [self.addPostView.titleLabel resignFirstResponder];
+    [self.addPostView.postDescriptionLabel resignFirstResponder];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -51,7 +66,7 @@
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSString *username = [defaults objectForKey:@"username"];
         
-        NSMutableArray *persistenTitles = [[defaults arrayForKey:@"titles"]mutableCopy];
+        /*NSMutableArray *persistenTitles = [[defaults arrayForKey:@"titles"]mutableCopy];
         NSMutableArray *persistentPosts = [[defaults arrayForKey:@"posts"]mutableCopy];
         NSMutableArray *persistentUsers = [[defaults arrayForKey:@"users"]mutableCopy];
         
@@ -63,14 +78,37 @@
         // Store arrays to NSUserDefaults
         [defaults setObject:persistenTitles forKey:@"titles"];
         [defaults setObject:persistentPosts forKey:@"posts"];
-        [defaults setObject:persistentUsers forKey:@"users"];
+        [defaults setObject:persistentUsers forKey:@"users"];*/
+        
+        //================================================================================
+        
+        AppDelegate *ad = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    
+        NSEntityDescription *entityPost = [NSEntityDescription entityForName:@"Post" inManagedObjectContext:ad.managedObjectContext];
+        NSManagedObject *newPost = [[NSManagedObject alloc] initWithEntity:entityPost insertIntoManagedObjectContext:ad.managedObjectContext];
+        
+        [newPost setValue:titleLabel forKey:@"title"];
+        [newPost setValue:postDescriptionLabel forKey:@"body"];
+        [newPost setValue:username forKey:@"user"];
+        
+        NSError *error = nil;
+        if (![newPost.managedObjectContext save:&error]) {
+            NSLog(@"Unable to save managed object context");
+            NSLog(@"%@, %@", error, error.localizedDescription);
+        }
+        
+        //================================================================================
         
         NSString *msg = [NSString stringWithFormat:@"%@ %@", @"Successfully add", titleLabel];
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
         
-        self.addPostView.titleLabel.text = nil;
-        self.addPostView.postDescriptionLabel.text = nil;
+        //[self dismissViewControllerAnimated:YES completion:nil];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        
+        //self.addPostView.titleLabel.text = nil;
+        //self.addPostView.postDescriptionLabel.text = nil;
     }
     else if([titleLabel isEqualToString:@""] || [postDescriptionLabel isEqualToString:@""]){
         NSLog(@"here");
@@ -81,9 +119,21 @@
     
 }
 
+#pragma mark - UITextView Delegates
+- (void) textViewDidBeginEditing:(UITextView *)textView{
+    activeField2 = textView;
+}
 
+- (void) textViewDidEndEditing:(UITextView *)textView{
+    activeField2 = nil;
+}
 
-#pragma mark - UITestField Delegates
+- (BOOL) textViewShouldReturn:(UITextView *) textView{
+    [textView resignFirstResponder];
+    return YES;
+}
+
+#pragma mark - UITextField Delegates
 - (void) textFieldDidBeginEditing:(UITextField *)textField{
     activeField = textField;
 }

@@ -11,7 +11,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rwD-OI-agN">
-                    <rect key="frame" x="8" y="168" width="304" height="41"/>
+                    <rect key="frame" x="8" y="178" width="304" height="41"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.47843140363693237" green="0.3333333432674408" blue="0.13725490868091583" alpha="1" colorSpace="deviceRGB"/>
                     <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="16"/>
@@ -24,7 +24,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi User!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Yx-B3-g32">
-                    <rect key="frame" x="116" y="116" width="188" height="34"/>
+                    <rect key="frame" x="130" y="119" width="188" height="51"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="IowanOldStyle-BoldItalic" family="Iowan Old Style" pointSize="28"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -43,12 +43,12 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1nb-tZ-fX1">
-                    <rect key="frame" x="8" y="210" width="304" height="350"/>
+                    <rect key="frame" x="8" y="217" width="304" height="343"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" id="XnM-5v-VVQ">
-                    <rect key="frame" x="18" y="75" width="90" height="90"/>
+                    <rect key="frame" x="21" y="81" width="95" height="95"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.92549026010000002" green="0.97647064920000004" blue="0.9450981021" alpha="1" colorSpace="deviceRGB"/>
                 </imageView>

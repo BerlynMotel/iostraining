@@ -59,14 +59,10 @@
                         </textField>
                     </subviews>
                     <gestureRecognizers/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="XZ6-bS-0Hi" appends="YES" id="ewC-S5-WME"/>
-                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.043137256056070328" green="0.12941177189350128" blue="0.14117647707462311" alpha="1" colorSpace="deviceRGB"/>
             <connections>
-                <outlet property="hideKeyBoard" destination="XZ6-bS-0Hi" id="c4N-Hu-9Ou"/>
                 <outlet property="loginButton" destination="PXp-XX-YKl" id="wQk-Ko-WPk"/>
                 <outlet property="passwordTextField" destination="GKi-x4-yxG" id="KT0-Dg-K3y"/>
                 <outlet property="scrollView" destination="uXB-NA-6XE" id="cI2-XH-o8Z"/>
@@ -74,11 +70,6 @@
             </connections>
             <point key="canvasLocation" x="107" y="256"/>
         </view>
-        <tapGestureRecognizer id="XZ6-bS-0Hi">
-            <connections>
-                <action selector="hideKeyBoard:" destination="fgR-6P-mYa" id="XLk-jI-ShZ"/>
-            </connections>
-        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="bear" width="400" height="399"/>

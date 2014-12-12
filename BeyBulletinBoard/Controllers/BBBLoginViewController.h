@@ -12,5 +12,6 @@
 @interface BBBLoginViewController : BBBBaseUIViewController<BBBLoginViewDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) BBBLoginView *loginView;
+@property (nonatomic, strong) IBOutlet UITapGestureRecognizer *tapRecognizer;
 
 @end

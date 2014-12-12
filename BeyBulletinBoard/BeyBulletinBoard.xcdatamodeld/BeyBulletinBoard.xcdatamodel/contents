@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Comment" syncable="YES">
+    <entity name="Comment" representedClassName="Comment" syncable="YES">
         <attribute name="comment_text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Post" inverseName="comment" inverseEntity="Post" syncable="YES"/>
     </entity>
-    <entity name="Post" syncable="YES">
+    <entity name="Post" representedClassName="Post" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="comment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" inverseName="post" inverseEntity="Comment" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Comment" positionX="-63" positionY="-18" width="128" height="88"/>
-        <element name="Post" positionX="-54" positionY="18" width="128" height="103"/>
+        <element name="Comment" positionX="-351" positionY="-268" width="128" height="103"/>
+        <element name="Post" positionX="-569" positionY="-355" width="128" height="103"/>
     </elements>
 </model>

@@ -10,7 +10,7 @@
 #import "BBBPostView.h"
 #import "BBBCommentTableViewCell.h"
 
-@interface BBBPostViewController : BBBBaseUIViewController<BBBPostViewDelegate>
+@interface BBBPostViewController : BBBBaseUIViewController<BBBPostViewDelegate,UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UITextViewDelegate>
 
 @property (strong, nonatomic) BBBPostView *postView;
 @property (strong, nonatomic) BBBCommentTableViewCell *commentTableView;

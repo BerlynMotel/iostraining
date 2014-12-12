@@ -23,4 +23,5 @@
         [self.delegate loginButtonPressed];
     }
 }
+
 @end

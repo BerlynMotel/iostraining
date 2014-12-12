@@ -10,6 +10,11 @@
 
 @implementation BBBHomeView
 
+-(void) awakeFromNib {
+    self.profilePicture.layer.cornerRadius = self.frame.size.width / 8.0;
+    self.profilePicture.clipsToBounds = YES;
+}
+
 - (IBAction)logoutButtonPressed:(id)sender {
     if (self.delegate && [self.delegate respondsToSelector:@selector(logoutButtonPressed)]) {
         [self.delegate logoutButtonPressed];

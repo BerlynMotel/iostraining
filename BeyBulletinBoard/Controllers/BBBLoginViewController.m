@@ -22,6 +22,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyBoard)];
+    [self.view addGestureRecognizer:tapGesture];
+    
     // load xib into view
     self.loginView = (BBBLoginView*)[self getCustomXibUsingXibName:@"LoginView"];
     
@@ -40,7 +43,14 @@
     users = [[NSArray alloc] initWithObjects:@"mac", @"bey", @"jovie", nil];
     passwords = [[NSMutableArray alloc] initWithObjects:@"mac", @"bey", @"jovie", nil];
     
+    
 }
+
+-(void)hideKeyBoard {
+    [self.loginView.usernameTextField resignFirstResponder];
+    [self.loginView.passwordTextField resignFirstResponder];
+}
+
 
 -(void) viewDidDisappear:(BOOL)animated{
     self.loginView.usernameTextField.text = @"";
@@ -97,7 +107,6 @@
 
 - (void) textFieldDidEndEditing:(UITextField *)textField{
     activeField = nil;
-    
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField{
@@ -132,6 +141,7 @@
     // Reset the content size of the scroll view
     self.loginView.scrollView.contentSize = CGSizeMake(0.0, 0.0);
 }
+
 
 
 /*

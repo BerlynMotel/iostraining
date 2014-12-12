@@ -17,12 +17,13 @@
 
 @interface BBBPostView : UIView
 
+@property (weak, nonatomic) IBOutlet UITextView *commentTextField;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *authorLabel;
 @property (weak, nonatomic) IBOutlet UITextView *postDescriptionTextView;
-@property (weak, nonatomic) IBOutlet UIButton *addCommentButtonPressed;
+@property (weak, nonatomic) IBOutlet UIButton *addCommentButton;
 @property (weak, nonatomic) IBOutlet UITableView *commentTableView;
-@property (weak, nonatomic) IBOutlet UITextView *commentTextView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 - (IBAction)addCommentButtonPressed:(id)sender;
 

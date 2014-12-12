@@ -7,6 +7,8 @@
 //
 
 #import "BBBHomeViewController.h"
+#import "AppDelegate.h"
+#import "Post.h"
 
 @interface BBBHomeViewController (){
     NSMutableArray *titles;
@@ -66,14 +68,10 @@
     self.homeView.usernameLabel.text =  uname;
     if ([username isEqualToString:@"bey"]) {
         self.homeView.profilePicture.image = [UIImage imageNamed:@"beybey"];
-        self.homeView.profilePicture.layer.cornerRadius = self.homeView.frame.size.width / 7.8;
-        self.homeView.profilePicture.clipsToBounds = YES;
 
         //self.homeView.profilePicture.layer.cornerRadius = 41.0;
     }else{
         self.homeView.profilePicture.image = [UIImage imageNamed:@"head"];
-        self.homeView.profilePicture.layer.cornerRadius = self.homeView.frame.size.width / 7.8;
-        self.homeView.profilePicture.clipsToBounds = YES;
         //self.homeView.profilePicture.layer.cornerRadius = 41.0;
     }
     
@@ -117,6 +115,26 @@
     [self.homeView.postTableView reloadData];*/
 }
 
+- (NSArray*) getAllPost{
+    AppDelegate *ad = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Post" inManagedObjectContext:ad.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *result = [ad.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if(error){
+        //NSLog(@"Unable to execute fetch request");
+        //NSLog(@"%@, %@", error, error.localizedDescription);
+    }
+    else{
+        //NSLog(@"%@", result);
+    }
+    
+    return result;
+}
+
 
 #pragma mark - UITableViewDataSource
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
@@ -124,9 +142,10 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+   /* NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *persistentTitles = [[defaults arrayForKey:@"titles"]mutableCopy];
-    return persistentTitles.count;
+    return persistentTitles.count;*/
+    return [self getAllPost].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -138,14 +157,19 @@
             postCell = [[[NSBundle mainBundle] loadNibNamed:@"PostTableViewCell" owner:nil options:nil] objectAtIndex:0];
         }
         
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        /*NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSMutableArray *persistenTitles = [[defaults arrayForKey:@"titles"]mutableCopy];
         NSMutableArray *persistentPosts = [[defaults arrayForKey:@"posts"]mutableCopy];
         NSMutableArray *persistentUsers = [[defaults arrayForKey:@"users"]mutableCopy];
         
         postCell.titleLabel.text = [persistenTitles objectAtIndex:indexPath.row];
         postCell.postDescriptionLabel.text = [persistentPosts objectAtIndex:indexPath.row];
-        postCell.userLabel.text = [persistentUsers objectAtIndex:indexPath.row];
+        postCell.userLabel.text = [persistentUsers objectAtIndex:indexPath.row];*/
+        
+        Post *post = [[self getAllPost] objectAtIndex:indexPath.row];
+        postCell.titleLabel.text = post.title;
+        postCell.postDescriptionLabel.text = post.body;
+        postCell.userLabel.text = post.user;
         
         return postCell;
     }
@@ -158,18 +182,23 @@
     NSLog(@"table cell pressed");
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *persistenTitles = [[defaults arrayForKey:@"titles"]mutableCopy];
+    /*NSMutableArray *persistenTitles = [[defaults arrayForKey:@"titles"]mutableCopy];
     NSMutableArray *persistentPosts = [[defaults arrayForKey:@"posts"]mutableCopy];
     NSMutableArray *persistentUsers = [[defaults arrayForKey:@"users"]mutableCopy];
 
     // Init arrays
     NSString *title = [persistenTitles objectAtIndex:indexPath.row];
     NSString *post = [persistentPosts objectAtIndex:indexPath.row];
-    NSString *author =[persistentUsers objectAtIndex:indexPath.row];
-   
+    NSString *author =[persistentUsers objectAtIndex:indexPath.row];*/
+    
+    Post *post = [[self getAllPost] objectAtIndex:indexPath.row];
+    NSString *title = post.title;
+    NSString *userpost = post.body;
+    NSString *author = post.user;
+    
     // Store arrays to NSUserDefaults
     [defaults setObject:title forKey:@"title"];
-    [defaults setObject:post forKey:@"post"];
+    [defaults setObject:userpost forKey:@"post"];
     [defaults setObject:author forKey:@"author"];
     
     [self performSegueWithIdentifier:@"HomeToViewPost" sender:self];
